@@ -28,9 +28,14 @@ yarn-error.log*
 # local env files
 .env*.local
 
+#secret
+.env
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+pnpm-lock.yaml
