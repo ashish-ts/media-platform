@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import jwt from 'jsonwebtoken';
 
 
+
 export async function getUserByCookies(request: NextRequest) {
     try {
         const token = request.cookies.get('accessToken')?.value || '';
@@ -17,9 +18,9 @@ export async function getUserByCookies(request: NextRequest) {
 
         } else {
 
-            const decordedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET!) as jwt.JwtPayload;
+            const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET!) as jwt.JwtPayload;
 
-            return { _id: decordedToken?._id, tokenState: tokenState }
+            return { _id: decodedToken?._id, tokenState: tokenState }
         }
 
     } catch (error) {

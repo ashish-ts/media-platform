@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
         const { userId } = req.query;
 
         // Aggregate pipeline to fetch notification data for a specific user
-        const notifyPepline = await User.aggregate([
+        const notifyPipeline = await User.aggregate([
             {
                 $match: {
                     name: `${userId}`
@@ -57,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
         ]);
 
         // Return the fetched notification data with a 201 status code
-        return res.status(201).json({ notify: notifyPepline });
+        return res.status(201).json({ notify: notifyPipeline });
 
     } catch (error) {
         console.log(error);

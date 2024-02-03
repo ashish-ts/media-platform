@@ -106,7 +106,7 @@ const RightNavbar = () => {
             </div>
             <div className='w-full h-[calc(100%-170px)] p-2 flex justify-center items-center flex-col gap-6'>
 
-                <Link href='/' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
+                <Link href='/' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex cursor-pointer ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
                     {themeMode === 'dark' ? (<svg fill="#fff" width="24px" height="24px" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" className="jam jam-home">
                         <path d='M18 18V7.132l-8-4.8-8 4.8V18h4v-2.75a4 4 0 1 1 8 0V18h4zm-6 2v-4.75a2 2 0 1 0-4 0V20H2a2 2 0 0 1-2-2V7.132a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.132V18a2 2 0 0 1-2 2h-6z' />
                     </svg>
@@ -118,7 +118,7 @@ const RightNavbar = () => {
                     }
                     {!isNotification && <p className='ml-2 font-light text-md'>Home</p>}
                 </Link>
-                <Link href='/search' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
+                <Link href='/search' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex cursor-pointer ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
                     {themeMode === 'dark' ? (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
                             <circle cx="11" cy="11" r="8" />
@@ -132,7 +132,7 @@ const RightNavbar = () => {
                     }
                     {!isNotification && <p className='ml-2 font-light text-md' >Search</p>}
                 </Link>
-                <Link href='/messages' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
+                <Link href='/messages' className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex cursor-pointer ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
                     {themeMode === 'dark' ? (<svg version="1.1" id="Capa_1" width="22px" fill="#fff" height="22px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 217.762 217.762" xmlSpace="preserve">
                         <path d="M108.881,5.334C48.844,5.334,0,45.339,0,94.512c0,28.976,16.84,55.715,45.332,72.454
@@ -157,7 +157,7 @@ const RightNavbar = () => {
                     )}
                     {!isNotification && <p className='ml-2 font-light text-md'>Messages</p>}
                 </Link>
-                <div onClick={() => { handleNotificationModel(), setNewNotification(false) }} className={`w-full relative p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
+                <div onClick={() => { handleNotificationModel(), setNewNotification(false) }} className={`w-full relative p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex cursor-pointer ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
                     {newNotification && <div className={`w-2 h-2 rounded-full bg-red-500 absolute top-3 left-3`} />}
                     {
                         themeMode === 'dark' ? (
@@ -173,7 +173,7 @@ const RightNavbar = () => {
                     }
                     {!isNotification && <p className='ml-2 font-light text-md'>Notifications</p>}
                 </div>
-                <div className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
+                <div className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all rounded-md flex cursor-pointer ${isNotification ? 'justify-center items-center' : 'justify-start items-start'}`} >
                     {themeMode === 'dark' ? (
                         <svg width="24px" height="24px" fill="#fff" viewBox="0 0 24 24" id="magicoon-Regular" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -197,7 +197,7 @@ const RightNavbar = () => {
                 </div>
 
                 <Link href={`/profile/${_id}`} className='w-full' >
-                    <div className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all gap-2 rounded-md flex ${!isNotification ? 'justify-start' : 'justify-center'} items-center`} >
+                    <div className={`w-full p-3 dark:hover:bg-neutral-900 hover:bg-gray-200 transition-all gap-2 rounded-md flex cursor-pointer ${!isNotification ? 'justify-start' : 'justify-center'} items-center`} >
                         <div className='w-[35px] h-[35px] relative'>
                             <Image
                                 src={profilePicture ? profilePicture : '/profile-circle.svg'}
